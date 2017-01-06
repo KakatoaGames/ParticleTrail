@@ -1,0 +1,9 @@
+name: ParticleTrail
+version: 2.3
+main: ParticleTrail.ParticleTrail
+author: VXA
+description: Particle trail effect
+depend: [PlayerPoints]
+
+commands:
+    trail:
