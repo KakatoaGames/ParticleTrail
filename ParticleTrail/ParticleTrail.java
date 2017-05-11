@@ -1,7 +1,6 @@
 package ParticleTrail;
 
 import ParticleTrail.command.trail;
-import ParticleTrail.listener.confirmation;
 import ParticleTrail.listener.moving;
 import org.black_ixx.playerpoints.PlayerPoints;
 import org.bukkit.Bukkit;
@@ -23,7 +22,7 @@ public class ParticleTrail extends JavaPlugin implements Listener{
         plugin = this;
         utility.loadConfig();
         getCommand("trail").setExecutor(new trail());
-        registerEvents(this, new trail(), new moving(), new confirmation());
+        registerEvents(this, new trail(), new moving());
         hookPlayerPoints();
     }
 

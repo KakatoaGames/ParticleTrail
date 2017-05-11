@@ -11,13 +11,13 @@ import org.bukkit.event.player.PlayerMoveEvent;
 /**
  * Created by User on 12/30/2016.
  */
-public class moving implements Listener{
+public class moving implements Listener {
 
     @EventHandler
-    public void onMove(PlayerMoveEvent e){
+    public void onMove(PlayerMoveEvent e) {
         Player p = e.getPlayer();
-        if (p.hasPermission("trail.flame")){
-            if (flameTrail.isFlameToggled(p)){
+        if (p.hasPermission("trail.flame")) {
+            if (flameTrail.isFlameToggled(p)) {
                 flameTrail.flameTrail(p);
             } else {
                 // do nothing
@@ -27,8 +27,8 @@ public class moving implements Listener{
         }
 
 
-        if (p.hasPermission("trail.magic")){
-            if (magicTrail.isMagicToggled(p)){
+        if (p.hasPermission("trail.magic")) {
+            if (magicTrail.isMagicToggled(p)) {
                 magicTrail.magicTrail(p);
             } else {
                 magicTrail.addMagicToggled(p, false);
@@ -37,8 +37,8 @@ public class moving implements Listener{
             // do nothing
         }
 
-        if (p.hasPermission("trail.smoke")){
-            if (smokeTrail.isSmokeToggled(p)){
+        if (p.hasPermission("trail.smoke")) {
+            if (smokeTrail.isSmokeToggled(p)) {
                 smokeTrail.smokeTrail(p);
             } else {
                 smokeTrail.addSmokeToggled(p, false);
