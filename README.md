@@ -1,3 +1,2 @@
 # ParticleTrail
-Particle effect
 Discontinued
